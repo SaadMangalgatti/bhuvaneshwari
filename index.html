@@ -50,6 +50,31 @@
             padding: 120px 0;
             text-align: center;
         }
+        /* Carousel Styles */
+        .carousel-item {
+            height: 80vh;
+            min-height: 500px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .carousel-caption {
+            bottom: 30%;
+            transform: translateY(50%);
+        }
+        
+        .carousel-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .carousel-subtitle {
+            font-size: 1.8rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 30px;
+        }
+        
         
         .hero-title {
             font-size: 3rem;
@@ -171,6 +196,22 @@
                 font-size: 1.2rem;
             }
         }
+
+               /* Responsive adjustments */
+       @media (max-width: 768px) {
+            .carousel-title {
+                font-size: 2.5rem;
+            }
+            
+            .carousel-subtitle {
+                font-size: 1.3rem;
+            }
+            
+            .carousel-item {
+                height: 60vh;
+                min-height: 400px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -212,13 +253,51 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section">
+    <!-- <section class="hero-section">
         <div class="container">
             <h1 class="hero-title">Bhuvaneshwari Science PU College</h1>
             <p class="hero-subtitle">Ignite the Mind, Inspire the Future</p>
             <a href="#courses" class="btn btn-primary">Explore Courses</a>
         </div>
-    </section>
+    </section> -->
+
+    <!-- Carousel Hero Section -->
+    <div id="collegeCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#collegeCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#collegeCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#collegeCarousel" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3')">
+                <div class="carousel-caption text-center">
+                    <h1 class="carousel-title">Bhuvaneshwari Science PU College</h1>
+                    <p class="carousel-subtitle">Ignite the Mind, Inspire the Future</p>
+                    <a href="#courses" class="btn btn-primary btn-lg">Explore Courses</a>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3')">
+                <div class="carousel-caption text-center">
+                    <h1 class="carousel-title">Excellence in Science Education</h1>
+                    <p class="carousel-subtitle">Blending Tradition with Modern Pedagogy</p>
+                    <a href="#about" class="btn btn-primary btn-lg">Learn About Us</a>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3')">
+                <div class="carousel-caption text-center">
+                    <h1 class="carousel-title">Holistic Development</h1>
+                    <p class="carousel-subtitle">Nurturing Minds and Character</p>
+                    <a href="#facilities" class="btn btn-primary btn-lg">View Facilities</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#collegeCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#collegeCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
 
     <!-- About Section -->
     <section id="about" class="about-section">
@@ -536,5 +615,12 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+   
+    
 </body>
-</html>
+
+</html>-------------------------------------------------------------------------------------------------------------
+
+
+
